@@ -4,7 +4,7 @@ import type { Article } from "../types/article.type";
 import Loader from "../components/Loader";
 import ErrorState from "../components/ErrorState";
 import EmptyState from "../components/EmptyState";
-import ArticlesTabs from "../components/ArticleTabs"
+import ArticlesTabs from "../components/ArticleTabs";
 import ArticlesGrid from "../components/ArticleGrid";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
       {error && <ErrorState />}
       {!loading && !error && articles.length === 0 && <EmptyState />}
       {!loading && !error && articles.length > 0 && (
-        <ArticlesGrid articles={articles} />
+        <ArticlesGrid articles={articles} variant={active} />
       )}
     </section>
   );

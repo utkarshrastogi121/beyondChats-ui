@@ -18,7 +18,5 @@ export const getOriginalArticles = async (): Promise<Article[]> => {
 
 export const getUpdatedArticles = async (): Promise<Article[]> => {
   const res = await apiPhase2.get("/api/updated-articles");
-
-  console.log("Updated :",res)
-  return res.data;
+  return res.data.data;
 };
