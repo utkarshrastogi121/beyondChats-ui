@@ -1,8 +1,8 @@
 export interface Article {
-  id: number;
+  _id: string;
   title: string;
   description: string;
-  image_url?: string | null;
-  source_url: string;
-  published_at: string;
+  link: string;
+  createdAt: string;
+  updatedAt: string;
 }
